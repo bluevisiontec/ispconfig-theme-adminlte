@@ -1,9 +1,19 @@
-	<!-- main navigation -->
-	<nav id='main-navigation' class='btn-group btn-group-justified'>
-    <tmpl_loop name="nav_top">
-		<a href="#" class="btn btn-default <tmpl_if name="active">active"<tmpl_else>" data-capp="<tmpl_var name='module'>"</tmpl_if> data-icon-class="icon-<tmpl_var name='module'>">
-		  <div class="icon icon-<tmpl_var name='module'>"></div>
-		  <div class="title"><tmpl_var name="title"></div>
-		</a>
-    </tmpl_loop>
-	</nav>
+<!-- Sidebar Menu -->
+<nav class="mt-2">
+
+    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <tmpl_loop name="nav_top">
+        <li class="nav-item">
+            
+             <a href="#" class="nav-link <tmpl_if name="active">active</tmpl_if>" data-capp="<tmpl_var name='module'>">
+                <div class="icon icon-<tmpl_var name='module'> d-inline-block"></div>
+                <p>
+                    <tmpl_var name="title">
+                </p>
+            </a>
+        </li>
+        </tmpl_loop>
+    </ul>
+
+    
+</nav>

@@ -10,7 +10,15 @@
   <meta name='keywords' lang='en' content='' />
   <meta name='robots' content='index, follow' />
 
-  <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/bootstrap.min.css' />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="themes/<tmpl_var name='current_theme'>/plugins/font-awesome/css/font-awesome.min.css">
+  <!-- IonIcons -->
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="themes/<tmpl_var name='current_theme'>/plugins/admin-lte/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <!--<link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/bootstrap.min.css' />-->
   <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/fonts.min.css' />
   <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/ispconfig.css' />
   <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/pushy.min.css' />
@@ -22,44 +30,67 @@
   <tmpl_if name='logged_in' value='n'><link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/login.css' /></tmpl_if>
 </head>
 
-<body>
-  <!-- off canvas -->
-  <nav class='pushy pushy-left'></nav>
-  <div class='site-overlay'></div>
+<body class="skin-blue">
+<div class="wrapper">
+
+<tmpl_if name='logged_in' value='y'>
+<nav class="main-header navbar navbar-expand navbar-dark bg-dark border-bottom">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+      </li>
+    </ul>
+    
+    <tmpl_if name="cpuser">
+        <tmpl_if name='usertype' op='==' value='normaluser'>
+            <!-- search field -->
+            <!-- SEARCH FORM -->
+            <form action='#' method='get' id='searchform' role='form' class="form-inline ml-3 float-right">
+            <div class="input-group input-group-sm">
+                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search" id="globalsearch">
+                <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+                </div>
+            </div>
+            </form>
+        </tmpl_if>
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <button type='button' id='logout-button' class='btn btn-sm btn-danger text-uppercase float-right' data-load-content="login/logout.php"><tmpl_var name="logout_txt"> <tmpl_var name="cpuser"></button>
+            </li>
+        </ul>
+    </tmpl_if>
+
+    
+  </nav>
+  <!-- /.navbar -->
+</tmpl_if>
+
+    <tmpl_if name='logged_in' value='y'>
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="#" class="brand-link">
+                <img src="{tmpl_var name="base64_logo_txt"}" />
+            </a>
+            
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div id='topnav-container'></div>
+            </div>
+        </aside>
+        
+    </tmpl_if>
 
   <div id='container'>
     <div id='main-wrapper'>
       <div id='inner-wrapper'>
         <div class='clear'>
-          <div class='left clear'>
-            <!-- off canvas menu button -->
-            <div class='menu-btn left'>&#9776;</div>
-            <!-- logo -->
-            <div id='logo' style="background: url({tmpl_var name="base64_logo_txt"}) no-repeat;width:{tmpl_var name="base64_logo_width"};height:{tmpl_var name="base64_logo_height"}"><a href='#'></a></div>
-          </div>
-          <div id='headerbar' class='clear'>
-            <!-- logout button -->
-            <tmpl_if name="cpuser">
-				<button type='button' id='logout-button' class='btn btn-sm btn-danger text-uppercase' data-load-content="login/logout.php"><tmpl_var name="logout_txt"> <tmpl_var name="cpuser"></button>
-				<tmpl_if name='usertype' op='==' value='normaluser'>
-					<!-- search field -->
-					<form action='#' method='get' id='searchform' role='form'>
-					  <div>
-						<div>
-						  <div class='input-group'>
-							<input id='globalsearch' type='text' class='form-control' placeholder='Search' />
-							<span class='input-group-btn'>
-							  <button class='btn btn-default' title='Search…'>
-								<span class='icon icon-lens'></span>
-							  </button>
-							</span>
-						  </div>
-						</div>
-					  </div>
-					</form>
-				</tmpl_if>
-            </tmpl_if>
-          </div>
+
                     <div class="notification" data-toggle="modal" data-target="#datalogModal" style="display: none;">
 	            <span class="notification_text">{tmpl_var name="datalog_changes_count"}</span>
             </div>
@@ -86,8 +117,7 @@
 			</div>
 			<!-- END Datalogstatus Modal -->
         </div>
-		<tmpl_if name='logged_in' value='y'><div id='topnav-container'>
-		</div></tmpl_if>
+		
 		<div class='clear'>
           <!-- content -->
           <div id='content' class='right'>
@@ -120,6 +150,7 @@
   <tmpl_loop name="js_d_includes">
 	<script type="text/javascript" src="js/js.d/<tmpl_var name='file'>"></script>
   </tmpl_loop>
+</div>
   <script>
   <!--
 	//$('.ttip').tipsy({live: true, gravity: 'ne', html: true});
@@ -145,6 +176,7 @@
 	});
   //-->
   </script>
+
 </body>
 
 </html>

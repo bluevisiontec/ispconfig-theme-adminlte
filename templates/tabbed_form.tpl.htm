@@ -22,15 +22,15 @@
 		<!-- tabs -->
 		<ul class='nav nav-tabs'>
 		<tmpl_loop name="formTab">
-			<li<tmpl_if name="active"> class='active'</tmpl_if>>
-				<a href='#' onclick="return ISPConfig.changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a>
+			<li  class="nav-item">
+				<a  class="nav-link <tmpl_if name="active">active</tmpl_if>" href='#' onclick="return ISPConfig.changeTab('<tmpl_var name='name'>','<tmpl_var name='app_module'>/<tmpl_var name='form_action'>')"><tmpl_var name='title'></a>
 			</li>
-        </tmpl_loop>
+                </tmpl_loop>
 		</ul>
 
 		<div id="tabbox_content" class="tab-content">
-			<div class='tab-pane active fade in'>
-			<tmpl_dyninclude name="content_tpl">
+			<div class='tab-pane active fade in show'>
+                            <tmpl_dyninclude name="content_tpl">
 			</div>
 		</div>
 

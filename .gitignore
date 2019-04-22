@@ -1,0 +1,7 @@
+*~
+.kdev4/
+*.kdev4
+.sass-cache/
+composer.lock
+vendor/
+node_modules/

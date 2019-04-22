@@ -1,0 +1,23 @@
+{
+    "name": "bluevisiontec/ispconfig-adminlte",
+    "description": "AdminLTE Theme for ISPConfig",
+    "type": "template",
+    "keywords": [
+        "ispconfig",
+        "theme",
+        "template",
+        "bootstrap"
+    ],
+    "authors": [
+        {
+        "name": "Reinhard Schneidewind",
+        "email": "rs@bluevisiontec.eu"
+        }
+    ],
+    "license": "MIT",
+    "require-dev": {
+        "almasaeed2010/adminlte": "dev-v3-dev",
+        "twbs/bootstrap": "^4.3.1",
+        "fortawesome/font-awesome": "^5.8.1"
+    }
+}

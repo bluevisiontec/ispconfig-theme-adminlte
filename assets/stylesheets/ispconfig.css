@@ -79,7 +79,7 @@ body {
   float: right;
   }
 
-#searchform {
+/*#searchform {
   float: right;
   margin-top: 16px; }
   #searchform > div {
@@ -91,7 +91,7 @@ body {
       vertical-align: top; }
   #searchform .icon {
     padding: 0 2px;
-    font-size: 16px; }
+    font-size: 16px; }*/
 
 #logout-button {
   float: right;

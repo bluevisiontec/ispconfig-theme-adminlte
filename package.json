@@ -1,0 +1,43 @@
+{
+    "name": "bluevisiontec-ispconfig-adminlte",
+    "description": "AdminLTE Theme for ISPConfig",
+    "scripts": {
+        "css": "npm-run-all --sequential css-adminlte",
+        "css-adminlte": "cleancss --level 1 --output assets/css/adminlte.min.css node_modules/admin-lte/dist/css/adminlte.css",
+        "compile": "npm-run-all --parallel js css",
+        "dev": "npm-run-all --parallel watch sync",
+        "js": "npm-run-all --sequential js-adminlte",
+        "js-adminlte": "uglifyjs --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=node_modules/admin-lte/dist/js/adminlte.js.map,includeSources,url=adminlte.min.js.map\" --output assets/js/adminlte.min.js node_modules/admin-lte/dist/js/adminlte.js",
+        "plugins": "node plugins.js"
+    },
+    "keywords": [
+        "ispconfig",
+        "theme",
+        "template",
+        "bootstrap"
+    ],
+    "author": "Reinhard Schneidewind <rs@bluevisiontec.eu>",
+    "license": "MIT",
+    "dependencies": {
+        "admin-lte": "almasaeed2010/adminlte#v3-dev",
+        "bootstrap": "^4.3.1",
+        "chart.js": "^2.7.2",
+        "datatables.net": "^1.10.19",
+        "datatables.net-bs4": "^1.10.19",
+        "@fortawesome/fontawesome-free": "^5.8.1",
+        "jquery": "^3.3.1",
+        "jquery-ui": "^1.12.1",
+        "popper.js": "^1.14.3"
+    },
+    "devDependencies": {
+        "clean-css-cli": "^4.1.11",
+        "css-loader": "^0.28.11",
+        "node-sass": "^4.9.2",
+        "npm-run-all": "^4.1.3",
+        "path": "^0.12.7",
+        "style-loader": "^0.19.1",
+        "uglify-js": "^3.4.4",
+        "fs-extra": "^5.0.0",
+        "ncp": "^2.0.0"
+    }
+}
