@@ -28,9 +28,10 @@
   <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/select2.css' />
   <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/select2-bootstrap.css' />
   <tmpl_if name='logged_in' value='n'><link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/login.css' /></tmpl_if>
+  <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/css/styles.css' />
 </head>
 
-<body class="skin-blue">
+<body class="skin-blue control-sidebar-slide-open">
 <div class="wrapper">
 
 <tmpl_if name='logged_in' value='y'>
@@ -62,6 +63,10 @@
             <li class="nav-item">
                 <button type='button' id='logout-button' class='btn btn-sm btn-danger text-uppercase float-right' data-load-content="login/logout.php"><tmpl_var name="logout_txt"> <tmpl_var name="cpuser"></button>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><i
+                    class="fa fa-th-large"></i></a>
+            </li>
         </ul>
     </tmpl_if>
 
@@ -74,7 +79,7 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="#" class="brand-link">
+            <a href="/" class="brand-link">
                 <img src="{tmpl_var name="base64_logo_txt"}" />
             </a>
             
@@ -86,55 +91,60 @@
         
     </tmpl_if>
 
-  <div id='container'>
-    <div id='main-wrapper'>
-      <div id='inner-wrapper'>
-        <div class='clear'>
-
-                    <div class="notification" data-toggle="modal" data-target="#datalogModal" style="display: none;">
-	            <span class="notification_text">{tmpl_var name="datalog_changes_count"}</span>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Main content -->
+    <section id='content' class="content">
+      <div class="container">
+      
+        <div class="notification" data-toggle="modal" data-target="#datalogModal" style="display: none;">
+            <span class="notification_text">{tmpl_var name="datalog_changes_count"}</span>
+        </div>
+        
+        <!-- Datalogstatus Modal -->
+        <div id="datalogModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">{tmpl_var name="datalog_changes_txt"}</h4>
+                </div>
+                <div class="modal-body">
+                <ul>
+                    <tmpl_loop name="datalog_changes">
+                        <li><strong>{tmpl_var name="text"}:</strong> {tmpl_var name="count"}</li>
+                    </tmpl_loop>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
             </div>
-			<!-- Datalogstatus Modal -->
-			<div id="datalogModal" class="modal fade" role="dialog">
-			  <div class="modal-dialog">
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <button type="button" class="close" data-dismiss="modal">&times;</button>
-			        <h4 class="modal-title">{tmpl_var name="datalog_changes_txt"}</h4>
-			      </div>
-			      <div class="modal-body">
-			        <ul>
-				    <tmpl_loop name="datalog_changes">
-				        <li><strong>{tmpl_var name="text"}:</strong> {tmpl_var name="count"}</li>
-				    </tmpl_loop>
-				    </ul>
-			      </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			      </div>
-			    </div>
-			  </div>
-			</div>
-			<!-- END Datalogstatus Modal -->
+            </div>
         </div>
-		
-		<div class='clear'>
-          <!-- content -->
-          <div id='content' class='right'>
-			<form method="post" action="" id="pageForm" name="pageForm" enctype="multipart/form-data" class='form-horizontal' role='form'>
-				<div id="pageContent" data-startpage="{tmpl_var name="startpage"}"><!-- AJAX CONTENT --></div>
-			</form>
-          </div>
-          <!-- news sidebar -->
-          <tmpl_if name='logged_in' value='y'><div id='sidebar' class='news-sidebar left'>
-          </div></tmpl_if>
-        </div>
-        <footer id='footer'>
-          powered by <a href="<tmpl_var name="app_link">" target="_blank"><tmpl_var name="app_title"></a>
-        </footer>
+        <!-- END Datalogstatus Modal -->
+      
+        <form method="post" action="" id="pageForm" name="pageForm" enctype="multipart/form-data" class='form-horizontal' role='form'>
+            <div id="pageContent" data-startpage="{tmpl_var name="startpage"}"><!-- AJAX CONTENT --></div>
+        </form>
       </div>
-    </div>
+    </section>
   </div>
+  <!-- /.content-wrapper -->
+  
+    
+    
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <tmpl_if name='logged_in' value='y'>
+            <div id='sidebar' class=''></div>
+        </tmpl_if>
+    </aside>
+    <!-- /.control-sidebar -->
+  
+    <footer id='footer'>
+        powered by <a href="<tmpl_var name="app_link">" target="_blank"><tmpl_var name="app_title"></a>
+    </footer>
 
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script src='themes/<tmpl_var name='current_theme'>/assets/javascripts/bootstrap.min.js'></script>

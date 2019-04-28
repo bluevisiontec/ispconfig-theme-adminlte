@@ -95,8 +95,8 @@ body {
 
 #logout-button {
   float: right;
-  margin-top: 16px;
-  margin-left: 25px;
+  margin-top: 5px;
+  /*margin-left: 25px;*/
   border-bottom-style: solid;
   border-bottom-width: 2px;
   transition: all ease 500ms; }
@@ -135,7 +135,7 @@ body {
   height: 100%;
   padding: 0; }
 
-#sidebar {
+/*#sidebar {
   margin-top: 27px;
   width: 18%;
   border-style: solid;
@@ -163,7 +163,7 @@ body {
     text-decoration: none;
     transition: color ease 500ms; }
     #sidebar header a {
-		padding: 0; }
+		padding: 0; }*/
 
 #select_server a {
   padding:0 10px; }
