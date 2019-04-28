@@ -65,7 +65,7 @@ body {
 #main-navigation .icon {
   text-shadow: 1px 1px 1px white; }
 
-#sidebar {
+/*#sidebar {
   border-color: #cedded;
   background: white; }
   #sidebar header {
@@ -76,7 +76,7 @@ body {
   #sidebar a {
     color: inherit; }
     #sidebar a:hover {
-      color: #428bde; }
+      color: #428bde; }*/
 
 .page-header {
   border-color: #cccccc; }

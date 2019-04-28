@@ -1,25 +1,45 @@
+<div class="p-3">
+<nav class="mt-2">
+<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 <tmpl_loop name="nav_left">
-	<tmpl_if name="title"><header><tmpl_if name="is_link" op="!=" value="no"><tmpl_if name="startpage"><a href="#" class="subnav-header" data-load-content="<tmpl_var name='startpage'>"></tmpl_if></tmpl_if><tmpl_var name="title"><tmpl_if name="is_link" op="!=" value="no"><tmpl_if name="startpage"></a></tmpl_if></tmpl_if></header></tmpl_if>
-	<ul id="sub-navigation">
-	  <tmpl_loop name="items">
-	  <li<tmpl_if name="html_id"> id='<tmpl_var name="html_id">' </tmpl_if>>
-		<tmpl_if name="link">
-			<tmpl_if name="target" op="==" value="_blank">
-				<a href="<tmpl_var name='link'>" target="_blank">
-			<tmpl_elseif name="target" op="==" value="_top">
-				<a href="<tmpl_var name='link'>" target="_top">
-			<tmpl_else>
-				<a href="#" data-load-content="<tmpl_var name='link'>">
-			</tmpl_if>
-		</tmpl_if>
-		  <div{tmpl_if name="css"} style="{tmpl_var name='css'}"{/tmpl_if}>
-			<tmpl_if name="title"><strong><tmpl_var name="title"></strong></tmpl_if>
-			<tmpl_if name="image"><div align="center"><tmpl_var name="image"></div></tmpl_if>
-		  </div>
-		<tmpl_if name="link">
-		</a>
-		</tmpl_if>
-	  </li>
-	  </tmpl_loop>
-	</ul>
+    <li class="nav-item has-treeview  menu-open"">
+    
+        
+        <tmpl_if name="title">
+            <a href="#" class="nav-link" <tmpl_if name="is_link" op="!=" value="no"><tmpl_if name="startpage">data-load-content="<tmpl_var name='startpage'>"</tmpl_if></tmpl_if>   >
+                <p>
+                <tmpl_var name="title">
+                <i class="fa fa-angle-left right"></i>
+            </p>
+            </a>
+        </tmpl_if>
+        
+        <ul class="nav nav-treeview">
+    
+            <tmpl_loop name="items">
+            <li class="nav-item" <tmpl_if name="html_id"> id='<tmpl_var name="html_id">' </tmpl_if>>
+                <tmpl_if name="link">
+                        <tmpl_if name="target" op="==" value="_blank">
+                                <a href="<tmpl_var name='link'>" target="_blank" class="nav-link">
+                        <tmpl_elseif name="target" op="==" value="_top">
+                                <a href="<tmpl_var name='link'>" target="_top" class="nav-link">
+                        <tmpl_else>
+                                <a href="#" data-load-content="<tmpl_var name='link'>" class="nav-link">
+                        </tmpl_if>
+                </tmpl_if>
+                    <p{tmpl_if name="css"} style="{tmpl_var name='css'}"{/tmpl_if}>
+                        <tmpl_if name="title"><tmpl_var name="title"></tmpl_if>
+                        <tmpl_if name="image"><div align="center"><tmpl_var name="image"></div></tmpl_if>
+                    </p>
+                <tmpl_if name="link">
+                </a>
+                </tmpl_if>
+            </li>
+            </tmpl_loop>
+        </ul>
+    </li>
+    
 </tmpl_loop>
+</ul>
+</nav>
+</div>
