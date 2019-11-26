@@ -19,25 +19,25 @@
     "author": "Reinhard Schneidewind <rs@bluevisiontec.eu>",
     "license": "MIT",
     "dependencies": {
-        "admin-lte": "almasaeed2010/adminlte#v3-dev",
+        "@fortawesome/fontawesome-free": "^5.11.2",
+        "admin-lte": "almasaeed2010/adminlte#semver:^3.0",
         "bootstrap": "^4.3.1",
-        "chart.js": "^2.7.2",
-        "datatables.net": "^1.10.19",
-        "datatables.net-bs4": "^1.10.19",
-        "@fortawesome/fontawesome-free": "^5.8.1",
-        "jquery": "^3.3.1",
+        "chart.js": "^2.9.3",
+        "datatables.net": "^1.10.20",
+        "datatables.net-bs4": "^1.10.20",
+        "jquery": "^3.4.1",
         "jquery-ui": "^1.12.1",
-        "popper.js": "^1.14.3"
+        "popper.js": "^1.16.0"
     },
     "devDependencies": {
         "clean-css-cli": "^4.1.11",
-        "css-loader": "^0.28.11",
-        "node-sass": "^4.9.2",
+        "css-loader": "^3.2.0",
+        "fs-extra": "^5.0.0",
+        "ncp": "^2.0.0",
+        "node-sass": "^4.13.0",
         "npm-run-all": "^4.1.3",
         "path": "^0.12.7",
         "style-loader": "^0.19.1",
-        "uglify-js": "^3.4.4",
-        "fs-extra": "^5.0.0",
-        "ncp": "^2.0.0"
+        "uglify-js": "^3.7.0"
     }
 }
