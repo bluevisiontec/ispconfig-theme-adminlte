@@ -1,19 +1,11 @@
-<!-- Sidebar Menu -->
-<nav class="mt-2">
-
-    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-        <tmpl_loop name="nav_top">
-        <li class="nav-item">
-            
-             <a href="#" class="nav-link <tmpl_if name="active">active</tmpl_if>" data-capp="<tmpl_var name='module'>">
-                <div class="icon icon-<tmpl_var name='module'> d-inline-block"></div>
-                <p>
-                    <tmpl_var name="title">
-                </p>
-            </a>
-        </li>
-        </tmpl_loop>
-    </ul>
-
-    
-</nav>
+<!-- Top Menu -->
+<li class="nav-item">
+    <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+</li>
+<tmpl_loop name="nav_top">
+<li class="nav-item">
+    <a href="#" class="nav-link <tmpl_if name="active">active</tmpl_if>" data-capp="<tmpl_var name='module'>">
+        <span class="icon icon-<tmpl_var name='module'> d-inline"></span> <tmpl_var name="title">
+    </a>
+</li>
+</tmpl_loop>
