@@ -10,14 +10,10 @@
   <meta name='keywords' lang='en' content='' />
   <meta name='robots' content='index, follow' />
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="themes/<tmpl_var name='current_theme'>/plugins/font-awesome/css/font-awesome.min.css">
-  <!-- IonIcons -->
-  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="themes/<tmpl_var name='current_theme'>/plugins/admin-lte/css/adminlte.min.css">
-  <!-- Google Font: Source Sans Pro -->
   <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/fonts/source-sans-pro/source-sans-pro.css' />
+  <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/css/fontawesome.min.css' />
   <!--<link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/bootstrap.min.css' />-->
   <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/fonts.min.css' />
   <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/ispconfig.css' />
@@ -57,9 +53,6 @@
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <button type='button' id='logout-button' class='btn btn-sm btn-danger text-uppercase float-right' data-load-content="login/logout.php"><tmpl_var name="logout_txt"> <tmpl_var name="cpuser"></button>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><i
                     class="fa fa-th-large"></i></a>
             </li>
@@ -81,7 +74,14 @@
             
             <!-- Sidebar -->
             <div class="sidebar">
-                
+            
+            <div class="user-panel mt-3 pb-3 mb-3">
+                <div class="info text-light">
+                    <tmpl_var name="cpuser"> <br/>
+                    <a type='button' data-load-content="login/logout.php"><i class="fas fa-sign-out-alt"></i> <tmpl_var name="logout_txt"> </a>
+                </div>
+            </div>
+            
             </div>
         </aside>
         

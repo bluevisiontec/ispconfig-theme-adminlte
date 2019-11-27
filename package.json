@@ -8,8 +8,11 @@
         "dev": "npm-run-all --parallel watch sync",
         "js": "npm-run-all --sequential js-adminlte",
         "js-adminlte": "uglifyjs --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=node_modules/admin-lte/dist/js/adminlte.js.map,includeSources,url=adminlte.min.js.map\" --output assets/js/adminlte.min.js node_modules/admin-lte/dist/js/adminlte.js",
-        "fonts": "npm-run-all --parallel font-source-sans-pro",
+        "fonts": "npm-run-all --parallel font-source-sans-pro font-awesome",
+        "font-awesome": "npm-run-all --parallel font-awesome-font font-awesome-css",
         "font-source-sans-pro": "ncp node_modules/source-sans-pro/ assets/fonts/source-sans-pro/",
+        "font-awesome-font": "ncp node_modules/admin-lte/plugins/fontawesome-free/webfonts/ assets/webfonts/",
+        "font-awesome-css": "ncp node_modules/admin-lte/plugins/fontawesome-free/css/all.min.css assets/css/fontawesome.min.css",
         "plugins": "node plugins.js"
     },
     "keywords": [
