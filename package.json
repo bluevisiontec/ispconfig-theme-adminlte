@@ -2,8 +2,9 @@
     "name": "bluevisiontec-ispconfig-adminlte",
     "description": "AdminLTE Theme for ISPConfig",
     "scripts": {
-        "css": "npm-run-all --sequential css-adminlte",
+        "css": "npm-run-all --sequential css-adminlte css-styles",
         "css-adminlte": "cleancss --level 1 --output assets/css/adminlte.min.css node_modules/admin-lte/dist/css/adminlte.css",
+        "css-styles": "node-sass --source-map true --include-path='assets/scss' --output='assets/css/' assets/scss",
         "compile": "npm-run-all --parallel js css fonts",
         "dev": "npm-run-all --parallel watch sync",
         "js": "npm-run-all --sequential js-adminlte",

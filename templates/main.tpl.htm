@@ -27,29 +27,15 @@
   <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/css/styles.css' />
 </head>
 
-<body class="skin-blue control-sidebar-slide-open">
+<body class="skin-blue">
 <div class="wrapper">
 
 <tmpl_if name='logged_in' value='y'>
-<nav class="main-header navbar navbar-expand navbar-dark bg-dark border-bottom">
+<nav class="main-header navbar navbar-expand navbar-light border-bottom">
     <!-- Left navbar links -->
     <ul class="navbar-nav" id='topnav-container'></ul>
     
     <tmpl_if name="cpuser">
-        <tmpl_if name='usertype' op='==' value='normaluser'>
-            <!-- search field -->
-            <!-- SEARCH FORM -->
-            <form action='#' method='get' id='searchform' role='form' class="form-inline ml-3 float-right">
-            <div class="input-group input-group-sm">
-                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search" id="globalsearch">
-                <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                    <i class="fa fa-search"></i>
-                </button>
-                </div>
-            </div>
-            </form>
-        </tmpl_if>
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
@@ -75,13 +61,41 @@
             <!-- Sidebar -->
             <div class="sidebar">
             
-            <div class="user-panel mt-3 pb-3 mb-3">
-                <div class="info text-light">
-                    <tmpl_var name="cpuser"> <br/>
-                    <a type='button' data-load-content="login/logout.php"><i class="fas fa-sign-out-alt"></i> <tmpl_var name="logout_txt"> </a>
+                <tmpl_if name="cpuser">
+                <div class="user-panel mt-3 pb-3 mb-3">
+                    <div class="image text-light bg-info rounded-circle">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="info text-light">
+                        <tmpl_var name="cpuser"> <br/>
+                        <a type='button' data-load-content="login/logout.php"><i class="fas fa-sign-out-alt"></i> <tmpl_var name="logout_txt"> </a>
+                    </div>
                 </div>
-            </div>
-            
+                
+                <tmpl_if name='usertype' op='==' value='normaluser'>
+                    <!-- search field -->
+                    <!-- SEARCH FORM -->
+                    <div class="search-panel pb-3 mb-3">
+                        <form action='#' method='get' id='searchform' role='form'>
+                        <div class="input-group">
+                            <input class="form-control" type="search" placeholder="Search" aria-label="Search" id="globalsearch">
+                            <div class="input-group-append">
+                            <button class="btn btn-navbar" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </tmpl_if>
+                </tmpl_if>
+                
+                <div class="clearfix"></div>
+                
+                <tmpl_if name='logged_in' value='y'>
+                    <div id='sidebar' class=''></div>
+                </tmpl_if>
+                
             </div>
         </aside>
         
@@ -132,9 +146,7 @@
     
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark sidebar-dark-primary">
-        <tmpl_if name='logged_in' value='y'>
-            <div id='sidebar' class=''></div>
-        </tmpl_if>
+        
     </aside>
     <!-- /.control-sidebar -->
   

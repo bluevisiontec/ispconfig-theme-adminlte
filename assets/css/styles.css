@@ -1,2 +1,24 @@
 .control-sidebar {
   top: 3.5rem; }
+
+.user-panel {
+  display: flex;
+  align-items: center; }
+  .user-panel .image {
+    display: inline-block;
+    width: 4rem;
+    line-height: 4rem;
+    font-size: 2rem;
+    padding-left: 0;
+    margin-right: 0.75rem;
+    text-align: center; }
+
+.main-sidebar .search-panel {
+  border-bottom: 1px solid #4f5962; }
+
+.main-sidebar .gs-container {
+  display: block;
+  flex: 1 1 auto;
+  width: 1%; }
+
+/*# sourceMappingURL=styles.css.map */
