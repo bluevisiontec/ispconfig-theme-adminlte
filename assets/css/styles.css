@@ -21,4 +21,16 @@
   flex: 1 1 auto;
   width: 1%; }
 
+.table .filter-row td {
+  padding: 0.25rem; }
+
+/* override ispconfig.css */
+#content {
+  width: auto; }
+
+.table {
+  table-layout: auto; }
+  .table tbody tr td {
+    overflow-x: inherit; }
+
 /*# sourceMappingURL=styles.css.map */
