@@ -24,6 +24,25 @@
 .table .filter-row td {
   padding: 0.25rem; }
 
+.progress-bar {
+  height: 100%; }
+  .progress-bar.progress-bar-primary {
+    background-color: #007bff; }
+  .progress-bar.progress-bar-secondary {
+    background-color: #6c757d; }
+  .progress-bar.progress-bar-success {
+    background-color: #28a745; }
+  .progress-bar.progress-bar-info {
+    background-color: #17a2b8; }
+  .progress-bar.progress-bar-warning {
+    background-color: #ffc107; }
+  .progress-bar.progress-bar-danger {
+    background-color: #dc3545; }
+  .progress-bar.progress-bar-light {
+    background-color: #f8f9fa; }
+  .progress-bar.progress-bar-dark {
+    background-color: #343a40; }
+
 /* override ispconfig.css */
 #content {
   width: auto; }

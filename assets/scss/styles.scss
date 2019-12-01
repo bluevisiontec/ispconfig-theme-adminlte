@@ -1,3 +1,6 @@
+@import "../../node_modules/bootstrap/scss/_functions";
+@import "../../node_modules/bootstrap/scss/_variables";
+
 .control-sidebar {
     top: 3.5rem;
 }
@@ -28,6 +31,15 @@
 .table {
     .filter-row td {
         padding: 0.25rem;
+    }
+}
+
+.progress-bar {
+    height: 100%;
+    @each $color, $value in $theme-colors {
+        &.progress-bar-#{$color} {
+            background-color: $value;
+        }
     }
 }
 
