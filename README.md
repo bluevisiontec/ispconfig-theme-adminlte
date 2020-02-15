@@ -2,10 +2,15 @@
 
 This project aims to provide an ISPConfig theme based on AdminLTE.
 
-## Project status
+## Project status / further development
 
 The development of this project just started with a very basic implementation of
-AdminLTE. 
+AdminLTE.
+Shortly after starting this project I found out that ISPconfig has a very basic
+templating engine and that some template paths like dashlets are hardcoded.
+
+For this reason I will not put much effort in this project, but I might add further
+updates from time to time.
 
 ## Installation
 
