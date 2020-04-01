@@ -16,23 +16,23 @@
   <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/css/fontawesome.min.css' />
   <!--<link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/bootstrap.min.css' />-->
   <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/fonts.min.css' />
-  <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/ispconfig.css' />
-  <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/pushy.min.css' />
-  <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/bootstrap-datetimepicker.min.css' />
-  <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/responsive.min.css' />
-  <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/themes/default/theme.min.css' />
-  <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/select2.css' />
-  <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/select2-bootstrap.css' />
-  <tmpl_if name='logged_in' value='n'><link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/login.css' /></tmpl_if>
-  <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/css/styles.css' />
-</head>
+    <!--<link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/ispconfig.css' />-->
+    <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/pushy.min.css' />
+    <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/bootstrap-datetimepicker.min.css' />
+    <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/responsive.min.css' />
+    <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/themes/default/theme.min.css' />
+    <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/select2.css' />
+    <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/select2-bootstrap.css' />
+    <tmpl_if name='logged_in' value='n'><link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/stylesheets/login.css' /></tmpl_if>
+    <link rel='stylesheet' href='themes/<tmpl_var name='current_theme'>/assets/css/styles.css' />
+  </head>
 
-<body class="skin-blue">
-<div class="wrapper">
+  <body class="skin-blue">
+  <div class="wrapper">
 
-<tmpl_if name='logged_in' value='y'>
-<nav class="main-header navbar navbar-expand navbar-light border-bottom">
-    <!-- Left navbar links -->
+  <tmpl_if name='logged_in' value='y'>
+  <nav class="main-header navbar navbar-expand navbar-light border-bottom">
+      <!-- Left navbar links -->
     <ul class="navbar-nav" id='topnav-container'></ul>
     
     <tmpl_if name="cpuser">
@@ -171,7 +171,7 @@
   <script src='themes/<tmpl_var name='current_theme'>/assets/javascripts/modernizr.custom.min.js'></script>
   <script src='themes/<tmpl_var name='current_theme'>/assets/javascripts/pushy.min.js'></script>
   <script src='themes/<tmpl_var name='current_theme'>/assets/javascripts/responsive.min.js'></script>
-  <script src='js/select2/select2.min.js'></script>
+  <script src='themes/<tmpl_var name='current_theme'>/assets/js/select2/select2.min.js'></script>
   <script src='js/scrigo.js.php'></script>
   <script type="text/javascript" src="js/jquery.ispconfigsearch.js"></script>
   <script type="text/javascript" src="js/jquery.tipsy.js"></script>

@@ -98,7 +98,7 @@ var ISPConfig = {
 		else data = '&' + data;
 		
 		if(ISPConfig.options.useComboBox == true) {
-			$('#pageContent').find("select:not(.chosen-select)").select2({
+			$('#pageContent').find("form select:not(.chosen-select)").select2({
 				placeholder: '',
 				width: 'element',
 				selectOnBlur: true,
@@ -814,5 +814,7 @@ $(document).on('ready', function () {
 		}
 		return iCaretPos;
 	};
+
+	$.fn.select2.defaults.set("theme", "bootstrap4");
 });
 
