@@ -9,86 +9,84 @@
 	font-style: normal;
 }
 
-.icon {
+.iconisp {
 	font-family: 'ispconfig';
 	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
 }
 
-.icon:before {
+.iconisp:before {
 	vertical-align: middle;
 }
-.icon-calendar:before {
+.iconisp-calendar:before {
 	content: "\e60e";
 }
-.icon-billing:before {
+.iconisp-billing:before {
 	content: "\e60d";
 }
-.icon-lens:before {
+.iconisp-lens:before {
 	content: "\e60b";
 }
-.icon-bulb:before {
+.iconisp-bulb:before {
 	content: "\e60c";
 }
-.icon-vm2:before {
+.iconisp-vm2:before {
 	content: "\e600";
 }
-.icon-vm:before {
+.iconisp-vm:before {
 	content: "\e601";
 }
-.icon-tools:before {
+.iconisp-tools:before {
 	content: "\e602";
 }
-.icon-admin:before {
+.iconisp-admin:before {
 	content: "\e603";
 }
-.icon-sites:before {
+.iconisp-sites:before {
 	content: "\e604";
 }
-.icon-monitor:before {
+.iconisp-monitor:before {
 	content: "\e605";
 }
-.icon-dashboard:before {
+.iconisp-dashboard:before {
 	content: "\e606";
 }
-.icon-help:before {
+.iconisp-help:before {
 	content: "\e607";
 }
-.icon-mail:before, .icon-mailuser:before {
+.iconisp-mail:before, .iconisp-mailuser:before {
 	content: "\e608";
 }
-.icon-dns:before {
+.iconisp-dns:before {
 	content: "\e609";
 }
-.icon-client:before {
+.iconisp-client:before {
 	content: "\e60a";
 }
-.icon-edit:before {
+.iconisp-edit:before {
 	content: "\e615";
 }
-.icon-filter:before {
+.iconisp-filter:before {
 	content: "\e614";
 }
-.icon-link:before {
+.iconisp-link:before {
 	content: "\e60f";
 }
-.icon-action:before {
+.iconisp-action:before {
 	content: "\e610";
 }
-.icon-dbadmin:before {
+.iconisp-dbadmin:before {
 	content: "\e612";
 }
-.icon-loginas:before {
+.iconisp-loginas:before {
 	content: "\e611";
 }
-.icon-delete:before {
+.iconisp-delete:before {
 	content: "\e613";
 }
