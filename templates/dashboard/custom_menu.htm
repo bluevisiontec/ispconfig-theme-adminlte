@@ -1,0 +1,18 @@
+<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+    <li class="nav-item has-treeview menu-open">
+        <a href="#" class="nav-link active">
+            <p>
+                {tmpl_var name='latest_news_txt'}
+                <i class="fas fa-angle-left right"></i>
+            </p>
+        </a>
+        <ul class="nav nav-treeview">
+            <tmpl_loop name="news">
+                <li>
+                    <a href="{tmpl_var name="link"}" target="_blank" class="nav-link">{tmpl_var name="date"}<br />{tmpl_var name="title"}</a>
+                </li>
+            </tmpl_loop>
+        </ul>
+
+    </li>
+</ul>
