@@ -61,7 +61,7 @@
             <tmpl_if name="vhostdomain_type" op="!=" value="domain"><td><select class="form-control" name="search_parent_domain_id">{tmpl_var name='search_parent_domain_id'}</select></td></tmpl_if>
             <td><input class="form-control" type="text" name="search_domain" value="{tmpl_var name='search_domain'}" /></td>
             <td class="text-right">
-                <button type="button" class="btn btn-default" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" data-submit-form="pageForm" data-form-action="sites/web_vhost_domain_list.php"><span class="icon icon-filter"></span></button>
+                <button type="button" class="btn btn-default" name="Filter" id="Filter" value="{tmpl_var name="filter_txt"}" data-submit-form="pageForm" data-form-action="sites/web_vhost_domain_list.php"><span class="iconisp iconisp-filter"></span></button>
             </td>
         </tr>
         </thead>
@@ -74,9 +74,9 @@
                 <tmpl_if name="vhostdomain_type" op="!=" value="domain"><td><a href="#" data-load-content="sites/web_vhost_aliasdomain_edit.php?id={tmpl_var name='id'}">{tmpl_var name="parent_domain_id"}</a></td></tmpl_if>
                 <td><a href="#" data-load-content="sites/web_vhost_domain_edit.php?id={tmpl_var name='id'}&type={tmpl_var name='vhostdomain_type'}" data-toggle="tooltip" data-placement="bottom" title="{tmpl_var name='domain'}">{tmpl_var name="domain"}</a></td>
                 <td class="text-right">
-                    <a href="http://{tmpl_var name="domain"}" target="_blank" class="btn btn-default btn-sm mr-1"><span class="icon icon-link"></span></button>
+                    <a href="http://{tmpl_var name="domain"}" target="_blank" class="btn btn-default btn-sm mr-1"><span class="iconisp iconisp-link"></span></button>
                     <a href="http://{tmpl_var name="domain"}/stats/" target="_blank" class="btn btn-default btn-sm mr-1"><i class="fas fa-signal"></i></a>
-                    <a class="btn btn-danger btn-sm" href="javascript: ISPConfig.confirm_action('sites/web_vhost_domain_del.php?id={tmpl_var name='id'}&_csrf_id={tmpl_var name='csrf_id'}&_csrf_key={tmpl_var name='csrf_key'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span class="icon icon-delete"></span></button>
+                    <a class="btn btn-danger btn-sm" href="javascript: ISPConfig.confirm_action('sites/web_vhost_domain_del.php?id={tmpl_var name='id'}&_csrf_id={tmpl_var name='csrf_id'}&_csrf_key={tmpl_var name='csrf_key'}&phpsessid={tmpl_var name='phpsessid'}','{tmpl_var name='delete_confirmation'}');"><span class="iconisp iconisp-delete"></span></button>
                 </td>
             </tr>
         </tmpl_loop>
