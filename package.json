@@ -29,7 +29,7 @@
         "admin-lte": "almasaeed2010/adminlte#semver:^3.0",
         "bootstrap": "^4.3.1",
         "chart.js": "^2.9.3",
-        "datatables.net": "^1.10.20",
+        "datatables.net": "^1.10.22",
         "datatables.net-bs4": "^1.10.20",
         "jquery": "^3.5.0",
         "jquery-ui": "^1.12.1",
